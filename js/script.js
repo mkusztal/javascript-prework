@@ -1,5 +1,5 @@
 let computerMove = 'nieznany ruch';
-let playerMove = 'nieznany ruch'
+let playerMove = 'nieznany ruch';
 printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to ' + playerMove + ', to wygrywasz!');
 
 let randomFraction = Math.random();
