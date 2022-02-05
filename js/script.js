@@ -59,14 +59,13 @@ function playGame(playerInput){
     displayResults(computerMove, playerMove);
 }
 
-let rockButton = document.getElementById('rock').addEventListener('click', function(){
+document.getElementById('rock').addEventListener('click', function(){
     playGame(1);
 });
-
-let paperButton = document.getElementById('paper').addEventListener('click', function(){
+document.getElementById('paper').addEventListener('click', function(){
     playGame(2);
 });
 
-let scissorsButton = document.getElementById('scissors').addEventListener('click', function(){
+document.getElementById('scissors').addEventListener('click', function(){
     playGame(3);
 });
