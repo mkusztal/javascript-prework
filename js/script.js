@@ -1,10 +1,7 @@
-let playerInput;
-
 function playGame(playerInput){
     clearMessages();
 
     let randomNumber = Math.floor(Math.random() * 3 + 1);
-    // let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
     console.log('Gracz wpisał: ' + playerInput);
 
     let computerMove = getMoveName(randomNumber);
@@ -73,4 +70,3 @@ let paperButton = document.getElementById('paper').addEventListener('click', fun
 let scissorsButton = document.getElementById('scissors').addEventListener('click', function(){
     playGame(3);
 });
-
