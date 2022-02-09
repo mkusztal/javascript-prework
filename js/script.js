@@ -1,11 +1,11 @@
-function playGame(playerInput){
+{function playGame(playerInput){
     clearMessages();
 
-    let randomNumber = Math.floor(Math.random() * 3 + 1);
+    const randomNumber = Math.floor(Math.random() * 3 + 1);
     console.log('Gracz wpisał: ' + playerInput);
 
-    let computerMove = getMoveName(randomNumber);
-    let playerMove = getMoveName(playerInput);
+    const computerMove = getMoveName(randomNumber);
+    const playerMove = getMoveName(playerInput);
 
     function getMoveName(argMoveId){
         if(argMoveId == 1){
@@ -36,7 +36,7 @@ function playGame(playerInput){
         else if(argComputerMove == 'nożyce' && argPlayerMove == 'papier'){
             printMessage('Ty przegrywasz!');
         }
-        else if( argComputerMove == 'kamień' && argPlayerMove == 'kamień'){
+        else if(argComputerMove == 'kamień' && argPlayerMove == 'kamień'){
             printMessage('Remis!');
         }
         else if(argComputerMove == 'papier' && argPlayerMove == 'kamień'){
@@ -69,3 +69,4 @@ document.getElementById('paper').addEventListener('click', function(){
 document.getElementById('scissors').addEventListener('click', function(){
     playGame(3);
 });
+}
