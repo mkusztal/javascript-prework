@@ -5,9 +5,6 @@
     const randomNumber = Math.floor(Math.random() * 3 + 1);
     console.log("Gracz wpisał: " + playerInput);
 
-    const computerMove = getMoveName(randomNumber);
-    const playerMove = getMoveName(playerInput);
-
     const getMoveName = function (argMoveId) {
       if (argMoveId == 1) {
         return "kamień";
@@ -20,6 +17,9 @@
       }
     };
 
+    const computerMove = getMoveName(randomNumber);
+    const playerMove = getMoveName(playerInput);
+
     const displayResults = function (argComputerMove, argPlayerMove) {
       console.log("Wywołanie funkcji displayResults");
       console.log("Ruchy:", argComputerMove, argPlayerMove);
@@ -29,13 +29,9 @@
 
       if (argComputerMove == "kamień" && argPlayerMove == "papier") {
         printMessage("Ty wygrywasz!");
-      } else if (argComputerMove == "papier" && argPlayerMove == "papier") {
-        printMessage("Remis!");
-      } else if (argComputerMove == "nożyce" && argPlayerMove == "papier") {
+      }else if (argComputerMove == "nożyce" && argPlayerMove == "papier") {
         printMessage("Ty przegrywasz!");
-      } else if (argComputerMove == "kamień" && argPlayerMove == "kamień") {
-        printMessage("Remis!");
-      } else if (argComputerMove == "papier" && argPlayerMove == "kamień") {
+      }else if (argComputerMove == "papier" && argPlayerMove == "kamień") {
         return printMessage("Ty przegrywasz!");
       } else if (argComputerMove == "nożyce" && argPlayerMove == "kamień") {
         printMessage("Ty wygrywasz!");
@@ -43,7 +39,7 @@
         printMessage("Ty przegrywasz!");
       } else if (argComputerMove == "papier" && argPlayerMove == "nożyce") {
         printMessage("Ty wygrywasz!");
-      } else if (argComputerMove == "nożyce" && argPlayerMove == "nożyce") {
+      } else if (argComputerMove == argPlayerMove) {
         printMessage("Remis!");
       }
     };
